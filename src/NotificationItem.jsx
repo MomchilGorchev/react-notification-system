@@ -37,7 +37,8 @@ var NotificationItem = createReactClass({
     children: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element
-    ])
+    ]),
+    itemClassName: PropTypes.string
   },
 
   getDefaultProps: function() {
@@ -242,11 +243,12 @@ var NotificationItem = createReactClass({
 
   render: function() {
     var notification = this.props.notification;
-    var className = 'notification notification-' + notification.level;
+    var className = 'notification notification-' + notification.level + ' ' + this.props.itemClassName;
     var notificationStyle = merge({}, this._styles.notification);
     var cssByPos = this._getCssPropertyByPosition();
     var dismiss = null;
     var actionButton = null;
+    var children = null;
     var title = null;
     var message = null;
 
@@ -313,13 +315,14 @@ var NotificationItem = createReactClass({
     }
 
     if (notification.children) {
-      actionButton = notification.children;
+      children = notification.children;
     }
 
     return (
       <div className={ className } onClick={ this._dismiss } onMouseEnter={ this._handleMouseEnter } onMouseLeave={ this._handleMouseLeave } style={ notificationStyle }>
         { title }
         { message }
+        { children }
         { dismiss }
         { actionButton }
       </div>

@@ -15,7 +15,8 @@ var CONSTANTS = {
     success: 'success',
     error: 'error',
     warning: 'warning',
-    info: 'info'
+    info: 'info',
+    loading: 'loading'
   },
 
   // Notification defaults

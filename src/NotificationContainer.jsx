@@ -9,7 +9,8 @@ var NotificationContainer = createReactClass({
   propTypes: {
     position: PropTypes.string.isRequired,
     notifications: PropTypes.array.isRequired,
-    getStyles: PropTypes.object
+    getStyles: PropTypes.object,
+    containerClassName: PropTypes.string
   },
 
   _style: {},
@@ -26,6 +27,7 @@ var NotificationContainer = createReactClass({
   render: function() {
     var self = this;
     var notifications;
+    var containerClass = 'notifications-' + this.props.position + ' ' + self.props.containerClassName;
 
     if ([Constants.positions.bl, Constants.positions.br, Constants.positions.bc].indexOf(this.props.position) > -1) {
       this.props.notifications.reverse();
@@ -34,6 +36,7 @@ var NotificationContainer = createReactClass({
     notifications = this.props.notifications.map(function(notification) {
       return (
         <NotificationItem
+          itemClassName={ notification.itemClassName || '' }
           ref={ 'notification-' + notification.uid }
           key={ notification.uid }
           notification={ notification }
@@ -47,7 +50,7 @@ var NotificationContainer = createReactClass({
     });
 
     return (
-      <div className={ 'notifications-' + this.props.position } style={ this._style }>
+      <div className={ containerClass } style={ this._style }>
         { notifications }
       </div>
     );

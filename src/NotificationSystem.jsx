@@ -17,6 +17,15 @@ var NotificationSystem = createReactClass({
 
     overrideWidth: null,
 
+    elements: {
+      notification: 'NotificationItem',
+      title: 'Title',
+      messageWrapper: 'MessageWrapper',
+      dismiss: 'Dismiss',
+      action: 'Action',
+      actionWrapper: 'ActionWrapper'
+    },
+
     setOverrideStyle: function(style) {
       this.overrideStyle = style;
     },
@@ -41,15 +50,6 @@ var NotificationSystem = createReactClass({
       }
 
       return merge({}, Styles.Containers.DefaultStyle, Styles.Containers[position], override.DefaultStyle, override[position]);
-    },
-
-    elements: {
-      notification: 'NotificationItem',
-      title: 'Title',
-      messageWrapper: 'MessageWrapper',
-      dismiss: 'Dismiss',
-      action: 'Action',
-      actionWrapper: 'ActionWrapper'
     },
 
     byElement: function(element) {
@@ -94,14 +94,18 @@ var NotificationSystem = createReactClass({
       PropTypes.object
     ]),
     noAnimation: PropTypes.bool,
-    allowHTML: PropTypes.bool
+    allowHTML: PropTypes.bool,
+    itemClassName: PropTypes.string,
+    containerClassName: PropTypes.string
   },
 
   getDefaultProps: function() {
     return {
       style: {},
       noAnimation: false,
-      allowHTML: false
+      allowHTML: false,
+      itemClassName: '',
+      containerClassName: ''
     };
   },
 
@@ -109,6 +113,8 @@ var NotificationSystem = createReactClass({
     var _notification = merge({}, Constants.notification, notification);
     var notifications = this.state.notifications;
     var i;
+
+    _notification.itemClassName = this.props.itemClassName;
 
     if (!_notification.level) {
       throw new Error('notification level is required.');
@@ -249,6 +255,7 @@ var NotificationSystem = createReactClass({
 
         return (
           <NotificationContainer
+            containerClassName={ self.props.containerClassName || '' }
             ref={ 'container-' + position }
             key={ position }
             position={ position }
