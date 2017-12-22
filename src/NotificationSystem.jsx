@@ -142,6 +142,7 @@ var NotificationSystem = createReactClass({
     _notification.ref = 'notification-' + _notification.uid;
     this.uid += 1;
 
+    debugger
     // do not add if the notification already exists based on supplied uid
     for (i = 0; i < notifications.length; i += 1) {
       if (notifications[i].uid === _notification.uid) {

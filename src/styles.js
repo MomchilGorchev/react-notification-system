@@ -28,7 +28,7 @@ var STYLES = {
       fontFamily: 'inherit',
       position: 'fixed',
       width: defaultWidth,
-      padding: '0 10px 10px 10px',
+      padding: 0,
       zIndex: 9998,
       WebkitBoxSizing: 'border-box',
       MozBoxSizing: 'border-box',
@@ -87,10 +87,8 @@ var STYLES = {
       position: 'relative',
       width: '100%',
       cursor: 'pointer',
-      borderRadius: '2px',
       fontSize: '13px',
-      margin: '10px 0 0',
-      padding: '10px',
+      margin: 0,
       display: 'block',
       WebkitBoxSizing: 'border-box',
       MozBoxSizing: 'border-box',
@@ -111,39 +109,23 @@ var STYLES = {
     },
 
     success: {
-      borderTop: '2px solid ' + defaultColors.success.hex,
       backgroundColor: '#f0f5ea',
-      color: '#4b583a',
-      WebkitBoxShadow: '0 0 1px rgba(' + defaultColors.success.rgb + ',' + defaultShadowOpacity + ')',
-      MozBoxShadow: '0 0 1px rgba(' + defaultColors.success.rgb + ',' + defaultShadowOpacity + ')',
-      boxShadow: '0 0 1px rgba(' + defaultColors.success.rgb + ',' + defaultShadowOpacity + ')'
+      color: '#4b583a'
     },
 
     error: {
-      borderTop: '2px solid ' + defaultColors.error.hex,
       backgroundColor: '#f4e9e9',
-      color: '#412f2f',
-      WebkitBoxShadow: '0 0 1px rgba(' + defaultColors.error.rgb + ',' + defaultShadowOpacity + ')',
-      MozBoxShadow: '0 0 1px rgba(' + defaultColors.error.rgb + ',' + defaultShadowOpacity + ')',
-      boxShadow: '0 0 1px rgba(' + defaultColors.error.rgb + ',' + defaultShadowOpacity + ')'
+      color: '#412f2f'
     },
 
     warning: {
-      borderTop: '2px solid ' + defaultColors.warning.hex,
       backgroundColor: '#f9f6f0',
-      color: '#5a5343',
-      WebkitBoxShadow: '0 0 1px rgba(' + defaultColors.warning.rgb + ',' + defaultShadowOpacity + ')',
-      MozBoxShadow: '0 0 1px rgba(' + defaultColors.warning.rgb + ',' + defaultShadowOpacity + ')',
-      boxShadow: '0 0 1px rgba(' + defaultColors.warning.rgb + ',' + defaultShadowOpacity + ')'
+      color: '#5a5343'
     },
 
     info: {
-      borderTop: '2px solid ' + defaultColors.info.hex,
       backgroundColor: '#e8f0f4',
-      color: '#41555d',
-      WebkitBoxShadow: '0 0 1px rgba(' + defaultColors.info.rgb + ',' + defaultShadowOpacity + ')',
-      MozBoxShadow: '0 0 1px rgba(' + defaultColors.info.rgb + ',' + defaultShadowOpacity + ')',
-      boxShadow: '0 0 1px rgba(' + defaultColors.info.rgb + ',' + defaultShadowOpacity + ')'
+      color: '#41555d'
     }
   },
 
