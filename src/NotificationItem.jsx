@@ -104,8 +104,8 @@ var NotificationItem = createReactClass({
     case Constants.positions.tr:
     case Constants.positions.br:
       css = {
-        property: 'right',
-        value: -200
+        property: 'top',
+        value: -50
       };
       break;
 

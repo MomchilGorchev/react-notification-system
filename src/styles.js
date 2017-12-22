@@ -18,7 +18,6 @@ var defaultColors = {
     hex: '#369cc7'
   }
 };
-var defaultShadowOpacity = '0.9';
 
 var STYLES = {
 

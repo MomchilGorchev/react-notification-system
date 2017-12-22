@@ -1,5 +1,5 @@
 {
-//  "extends": "airbnb/legacy",
+  "extends": "airbnb/legacy",
   "env": {
     "browser": true,
     "node": true,
