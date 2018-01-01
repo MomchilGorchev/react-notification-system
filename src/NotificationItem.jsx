@@ -103,6 +103,7 @@ var NotificationItem = createReactClass({
 
     case Constants.positions.tr:
     case Constants.positions.br:
+      // TODO introduce way of overwriting this
       css = {
         property: 'top',
         value: -50
