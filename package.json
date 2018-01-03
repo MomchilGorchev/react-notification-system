@@ -1,6 +1,6 @@
 {
   "name": "react-customized-notifications",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React Notification System forked from https://github.com/igorprado/react-notification-system",
   "main": "dist/NotificationSystem.js",
   "scripts": {
