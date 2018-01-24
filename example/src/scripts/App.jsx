@@ -125,6 +125,10 @@ NotificationSystemExample = createReactClass({
     this._notificationSystem = this.refs.notificationSystem;
   },
 
+  itemClick: function() {
+    console.log('clicked!');
+  },
+
   render: function() {
     return (
       <div className="app-container">
@@ -157,7 +161,12 @@ NotificationSystemExample = createReactClass({
             <p>Made in Brasília, Brazil by <a href="http://igorprado.com" target="_blank">Igor Prado</a>.</p>
           </div>
         </footer>
-        <NotificationSystem ref="notificationSystem" allowHTML={ this.state.allowHTML } />
+        <NotificationSystem
+          ref="notificationSystem"
+          containerClassName='zappi-notification-container zappi-notification-sequence'
+          itemClassName='zappi-notification'
+          itemOnClick={ this.itemClick }
+          allowHTML={ this.state.allowHTML } />
       </div>
     );
   }

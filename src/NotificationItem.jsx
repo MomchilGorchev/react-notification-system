@@ -302,7 +302,15 @@ var NotificationItem = createReactClass({
     }
 
     if (notification.dismissible) {
-      dismiss = <span className="notification-dismiss" style={ this._styles.dismiss }>&times;</span>;
+      dismiss = (
+        <span
+          className="notification-dismiss"
+          style={ this._styles.dismiss }
+          onClick={ this._dismiss }
+        >
+            &times;
+        </span>
+      );
     }
 
     if (notification.action) {

@@ -29,9 +29,9 @@ var NotificationContainer = createReactClass({
     var self = this;
     var notifications;
     var containerClass = 'notifications-' + this.props.position + ' ' + self.props.containerClassName;
-    var itemOnClick = this.props.itemOnClick;
+    var itemOnClick = self.props.itemOnClick;
 
-    if ([Constants.positions.bl, Constants.positions.br, Constants.positions.bc].indexOf(this.props.position) > -1) {
+    if ([Constants.positions.bl, Constants.positions.br, Constants.positions.bc].indexOf(self.props.position) > -1) {
       this.props.notifications.reverse();
     }
 

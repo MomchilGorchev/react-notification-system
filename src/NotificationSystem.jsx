@@ -243,7 +243,7 @@ var NotificationSystem = createReactClass({
     var self = this;
     var containers = null;
     var notifications = this.state.notifications;
-    var itemOnClick = this.props.itemOnClick;
+    var itemOnClick = self.props.itemOnClick;
 
     if (notifications.length) {
       containers = Object.keys(Constants.positions).map(function(position) {
