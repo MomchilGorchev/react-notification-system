@@ -96,7 +96,8 @@ var NotificationSystem = createReactClass({
     noAnimation: PropTypes.bool,
     allowHTML: PropTypes.bool,
     itemClassName: PropTypes.string,
-    containerClassName: PropTypes.string
+    containerClassName: PropTypes.string,
+    itemOnClick: PropTypes.func
   },
 
   getDefaultProps: function() {
@@ -242,6 +243,7 @@ var NotificationSystem = createReactClass({
     var self = this;
     var containers = null;
     var notifications = this.state.notifications;
+    var itemOnClick = this.props.itemOnClick;
 
     if (notifications.length) {
       containers = Object.keys(Constants.positions).map(function(position) {
@@ -264,6 +266,7 @@ var NotificationSystem = createReactClass({
             onRemove={ self._didNotificationRemoved }
             noAnimation={ self.props.noAnimation }
             allowHTML={ self.props.allowHTML }
+            itemOnClick={ itemOnClick }
           />
         );
       });

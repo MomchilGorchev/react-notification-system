@@ -38,7 +38,8 @@ var NotificationItem = createReactClass({
       PropTypes.string,
       PropTypes.element
     ]),
-    itemClassName: PropTypes.string
+    itemClassName: PropTypes.string,
+    itemOnClick: PropTypes.func
   },
 
   getDefaultProps: function() {
@@ -252,6 +253,7 @@ var NotificationItem = createReactClass({
     var children = null;
     var title = null;
     var message = null;
+    var itemOnClick = this.props.itemOnClick;
 
     if (this.state.visible) {
       className += ' notification-visible';
@@ -320,7 +322,13 @@ var NotificationItem = createReactClass({
     }
 
     return (
-      <div className={ className } onClick={ this._dismiss } onMouseEnter={ this._handleMouseEnter } onMouseLeave={ this._handleMouseLeave } style={ notificationStyle }>
+      <div
+        className={ className }
+        onClick={ itemOnClick || this._dismiss }
+        onMouseEnter={ this._handleMouseEnter }
+        onMouseLeave={ this._handleMouseLeave }
+        style={ notificationStyle }
+      >
         { title }
         { message }
         { children }
