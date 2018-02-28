@@ -9,23 +9,7 @@
 This component is available as CommonJS and UMD module. Install via NPM running:
 
 ```
-npm install react-notification-system
-```
-
-### Important
-
-For **React ^0.14.x** or **React ^15.x.x**, use version 0.2.x:
-
-```
-npm install react-notification-system@0.2.x
-```
-
-For **React 0.13.x**, use version 0.1.x:
-
-```
-npm install react-notification-system@0.1.x
-```
-
+npm install react-customized-notifications
 
 ## Using (To be updated)
 
@@ -223,7 +207,7 @@ See [#74](https://github.com/igorprado/react-notification-system/issues/74) for 
 Clone this repo by running:
 
 ```
-git clone git@github.com:igorprado/react-notification-system.git
+git clone git@github.com:MomchilGorchev/react-notification-system.git
 ```
 
 Enter the project folder and install the dependencies:
