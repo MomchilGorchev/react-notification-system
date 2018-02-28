@@ -8,50 +8,9 @@
 
 This component is available as CommonJS and UMD module. Install via NPM running:
 
-```
-npm install react-customized-notifications
+```npm install react-customized-notifications```
 
 ## Using (To be updated)
-
-For optimal appearance, this component **must be rendered on a top level HTML element** in your application to avoid position conflicts.
-
-Here is a basic example. For a more advanced usage, please see the [example code](https://github.com/igorprado/react-notification-system/blob/master/example/src/scripts/App.jsx).
-
-```js
-var React = require('react');
-var ReactDOM = require('react-dom');
-var NotificationSystem = require('react-notification-system');
-
-var MyComponent = React.createClass({
-  _notificationSystem: null,
-
-  _addNotification: function(event) {
-    event.preventDefault();
-    this._notificationSystem.addNotification({
-      message: 'Notification message',
-      level: 'success'
-    });
-  },
-
-  componentDidMount: function() {
-    this._notificationSystem = this.refs.notificationSystem;
-  },
-
-  render: function() {
-    return (
-      <div>
-        <button onClick={this._addNotification}>Add notification</button>
-        <NotificationSystem ref="notificationSystem" />
-      </div>
-      );
-  }
-});
-
-ReactDOM.render(
-  React.createElement(MyComponent),
-  document.getElementById('app')
-);
-```
 
 ## Methods
 
