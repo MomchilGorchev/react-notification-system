@@ -32,7 +32,10 @@ var STYLES = {
       WebkitBoxSizing: 'border-box',
       MozBoxSizing: 'border-box',
       boxSizing: 'border-box',
-      height: 'auto'
+      height: 'auto',
+      maxHeight: 'calc(100% - 7em)',
+      overflow: 'hidden',
+      overflowY: 'auto'
     },
 
     tl: {
